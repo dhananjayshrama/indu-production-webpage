@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INDU PRODUCTION | Crafting Cinematic Love Stories</title>
+<meta name="description" content="INDU PRODUCTION — wedding post-production studio by Akshay Balinagl. Cinematic editing, color grading and storytelling for wedding films.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Reset ---------- */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #171512;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  /* ---------- Visible scrollbar ---------- */
+  html { scrollbar-width: auto; scrollbar-color: #171512 #f4f4f4; }
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: #f4f4f4; }
+  ::-webkit-scrollbar-thumb { background-color: #171512; border-radius: 20px; border: 3px solid #f4f4f4; }
+  ::-webkit-scrollbar-thumb:hover { background-color: #FFC107; }
+
+  .page { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .eyebrow {
+    display:inline-block; background:#FFF6DC; color:#8a6400; border-radius:8px;
+    padding:6px 14px; font-size:13px; font-weight:600; margin-bottom:18px;
+  }
+  .section-heading {
+    font-family:'Outfit', sans-serif; font-weight:600; font-size:42px;
+    letter-spacing:-1.5px; line-height:1.15; margin-bottom:16px;
+  }
+  .section-heading em { font-style:italic; color:#E6A700; }
+  .section-sub { color:#666; font-size:16.5px; line-height:1.7; max-width:560px; opacity:.9; }
+  section { padding:100px 0; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display:inline-flex; align-items:center; gap:8px; border-radius:40px;
+    padding:14px 28px; font-size:14px; font-weight:600; cursor:pointer; border:none;
+    transition: transform 0.25s cubic-bezier(0.33,1,0.68,1);
+  }
+  .btn:hover { transform: scale(1.03); }
+  .btn-primary { background:#FFC107; color:#171512; }
+  .btn-outline { background:#fff; color:#171512; border:1.5px solid #171512; }
+
+  /* ---------- NAV ---------- */
+  header.nav {
+    position: sticky; top:0; z-index:1000;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:1200px; margin:0 auto; }
+  .nav-logo { display:flex; align-items:center; gap:10px; }
+  .nav-logo img { height:46px; width:46px; object-fit:cover; border-radius:10px; transition: transform .3s ease; }
+  .nav-logo:hover img { transform: rotate(-4deg) scale(1.06); }
+  .nav-logo-text { line-height:1.1; }
+  .nav-logo-text .n1 { font-family:'Outfit',sans-serif; font-weight:700; font-size:16px; }
+  .nav-logo-text .n2 { font-size:9.5px; letter-spacing:1.5px; text-transform:uppercase; color:#a58200; }
+  .nav-links { display:flex; align-items:center; gap:32px; }
+  .nav-links a { font-size:13.5px; font-weight:600; color:#171512; position:relative; padding:4px 0; }
+  .nav-links a::after { content:''; position:absolute; left:0; bottom:-2px; height:2px; width:0; background:#FFC107; transition:width .3s ease; }
+  .nav-links a:hover::after { width:100%; }
+  .nav-cta { display:flex; align-items:center; gap:16px; }
+  .nav-cta .btn { padding:10px 22px; font-size:13px; }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger span { width:24px; height:2px; background:#171512; transition:.3s ease; }
+  .hamburger.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2){ opacity:0; }
+  .hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display:none; flex-direction:column; gap:2px; background:#fff; border-top:1px solid #f0f0f0;
+  }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { padding:16px 20px; font-size:14px; font-weight:600; border-bottom:1px solid #f6f6f6; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(23,21,18,0.72) 0%, rgba(23,21,18,0.55) 55%, rgba(255,255,255,0.97) 100%),
+      url('assets/about-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 110px;
+    text-align:center;
+    overflow: hidden;
+  }
+  .hero .eyebrow { background:rgba(255,255,255,0.9); border:1px solid #FFE29A; }
+  .hero h1 {
+    font-family:'Outfit', sans-serif; font-weight:600; font-size:60px; letter-spacing:-2px;
+    line-height:1.08; margin-bottom:24px; color:#fff; text-shadow:0 8px 30px rgba(0,0,0,.35);
+  }
+  .hero h1 span { color:#FFC107; font-style:italic; }
+  .hero p.bio {
+    max-width:720px; margin:0 auto 36px; color:rgba(255,255,255,.92); font-size:17px; line-height:1.85;
+  }
+  .hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px; }
+  .founder-tag {
+    font-family:'Outfit', sans-serif; font-style:italic; font-size:16px; color:#fff;
+  }
+  .founder-tag span { display:block; font-style:normal; font-family:'Inter',sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#FFC107; margin-top:6px; }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:50px; }
+  .service-card {
+    background:#fcfcfc; border:1px solid #f0f0f0; border-radius:20px; padding:34px 28px;
+    transition: transform .35s cubic-bezier(0.33,1,0.68,1), box-shadow .35s ease, border-color .35s ease;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(0,0,0,.07); border-color:#FFE29A; }
+  .service-icon {
+    width:48px; height:48px; border-radius:12px; background:#FFC107; color:#171512;
+    display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:18px;
+  }
+  .service-card h3 { font-family:'Outfit',sans-serif; font-weight:600; font-size:18px; margin-bottom:10px; }
+  .service-card p { color:#666; font-size:14px; line-height:1.7; }
+
+  /* ---------- VIDEO BOX (portfolio) ---------- */
+  .video-box { position:relative; overflow:hidden; border-radius:20px; cursor:pointer; }
+  .video-box video { width:100%; height:100%; object-fit:cover; transition: transform 0.5s cubic-bezier(0.33,1,0.68,1); }
+  .video-box:hover video { transform: scale(1.08); }
+  .video-overlay { position:absolute; inset:0; background:rgba(23,21,18,0.3); opacity:0; transition:opacity .4s ease; }
+  .video-box:hover .video-overlay { opacity:1; }
+  .video-plus {
+    position:absolute; top:50%; left:50%; width:64px; height:64px; border-radius:50%;
+    background:rgba(255,193,7,0.85); transform:translate(-50%,-50%) scale(0.7); opacity:0;
+    display:flex; align-items:center; justify-content:center;
+    transition: transform 0.3s cubic-bezier(0.33,1,0.68,1), opacity .3s ease;
+  }
+  .video-box:hover .video-plus { transform:translate(-50%,-50%) scale(1); opacity:1; }
+  .corner { position:absolute; width:12px; height:12px; border-color:#fff; border-style:solid; border-width:0; opacity:0; transition:opacity .3s ease; }
+  .video-box:hover .corner { opacity:1; }
+  .corner.tl{ top:14px; left:14px; border-top-width:1.5px; border-left-width:1.5px; }
+  .corner.tr{ top:14px; right:14px; border-top-width:1.5px; border-right-width:1.5px; }
+  .corner.bl{ bottom:14px; left:14px; border-bottom-width:1.5px; border-left-width:1.5px; }
+  .corner.br{ bottom:14px; right:14px; border-bottom-width:1.5px; border-right-width:1.5px; }
+
+  .portfolio { background:#FFFBEF; }
+  .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:50px; }
+  .portfolio-card .video-box { aspect-ratio: 4/5; }
+  .portfolio-title-row { display:flex; justify-content:space-between; align-items:center; margin-top:14px; }
+  .portfolio-title { font-family:'Outfit',sans-serif; font-weight:600; font-size:15.5px; }
+  .badge {
+    background:#FFC107; color:#171512; font-size:10.5px; font-weight:700; text-transform:uppercase;
+    padding:4px 12px; border-radius:20px; letter-spacing:.5px;
+  }
+
+  /* ---------- STATS ---------- */
+  .stats { background:#171512; color:#fff; }
+  .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px; text-align:center; }
+  .stat-num { font-family:'Outfit',sans-serif; font-weight:700; font-size:44px; color:#FFC107; }
+  .stat-lbl { font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,.65); margin-top:8px; }
+
+  /* ---------- LOCATION ---------- */
+  .location-wrap {
+    display:grid; grid-template-columns:1.2fr 1fr; gap:24px; border:1px solid #f0f0f0;
+    border-radius:20px; overflow:hidden; background:#fcfcfc; margin-top:50px;
+  }
+  .location-map iframe { width:100%; height:100%; min-height:340px; border:0; }
+  .location-info { padding:44px; display:flex; flex-direction:column; justify-content:center; }
+  .location-info h3 { font-family:'Outfit',sans-serif; font-weight:600; font-size:20px; margin-bottom:14px; }
+  .location-info p { color:#666; font-size:14.5px; line-height:1.8; margin-bottom:6px; }
+  .location-info .tag { font-weight:700; color:#171512; }
+
+  /* ---------- CONTACT ---------- */
+  .contact { background:#FFFBEF; }
+  .contact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:50px; }
+  .contact-card {
+    background:#fff; border:1px solid #f0f0f0; border-radius:18px; padding:30px 26px;
+    display:flex; flex-direction:column; gap:14px; transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .contact-card:hover { transform: translateY(-5px); box-shadow:0 18px 40px rgba(0,0,0,.06); }
+  .contact-icon { width:46px; height:46px; border-radius:12px; background:#FFC107; display:flex; align-items:center; justify-content:center; font-size:19px; }
+  .contact-card h4 { font-family:'Outfit',sans-serif; font-size:15.5px; }
+  .contact-card p { color:#666; font-size:13.5px; word-break:break-word; }
+
+  /* ---------- FOOTER ---------- */
+  footer { background:#171512; color:rgba(255,255,255,.7); padding:60px 0 26px; }
+  .footer-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:30px; margin-bottom:40px; }
+  .footer-brand { display:flex; align-items:center; gap:12px; }
+  .footer-brand img { height:44px; width:44px; border-radius:10px; }
+  .footer-brand .n1 { font-family:'Outfit',sans-serif; color:#fff; font-size:17px; font-weight:700; }
+  .footer p.tag { font-size:13px; max-width:280px; line-height:1.7; margin-top:10px; }
+  .footer-socials { display:flex; gap:12px; }
+  .footer-socials a { width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; transition:.3s ease; }
+  .footer-socials a:hover { background:#FFC107; color:#171512; transform: translateY(-3px); }
+  .footer-bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:22px; font-size:12px; color:rgba(255,255,255,.5); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .footer-bottom span { color:#FFC107; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .nav-links, .nav-cta .btn { display:none; }
+    .hamburger { display:flex; }
+    .hero h1 { font-size:42px; }
+    .services-grid, .portfolio-grid, .contact-grid { grid-template-columns:repeat(2,1fr); }
+    .stats-grid { grid-template-columns:repeat(2,1fr); gap:30px; }
+    .location-wrap { grid-template-columns:1fr; }
+  }
+  @media (max-width: 620px) {
+    section { padding:70px 0; }
+    .hero { padding:60px 0 70px; }
+    .hero h1 { font-size:32px; }
+    .section-heading { font-size:30px; }
+    .services-grid, .portfolio-grid, .contact-grid { grid-template-columns:1fr; }
+    .stats-grid { grid-template-columns:repeat(2,1fr); }
+    .footer-top { flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://www.instagram.com/theindutimeline_?igsh=MWE5djA0dnUzbzB6bQ==" target="_blank" rel="noopener" aria-label="Visit our Instagram">
+      <img src="assets/logo.jpeg" alt="INDU PRODUCTION logo">
+      <div class="nav-logo-text">
+        <div class="n1">INDU PRODUCTION</div>
+        <div class="n2">Cinematic Love Stories</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ============ HERO / ABOUT ============ -->
+<section class="hero" id="home">
+  <div class="page">
+    <span class="eyebrow">Wedding Post-Production Studio</span>
+    <h1 id="about">Welcome to <span>Indu Production</span> House</h1>
+    <p class="bio">
+      Every wedding is a story filled with laughter, tears of joy, and quiet glances. We specialize in
+      post-production video editing that turns raw wedding footage into cinematic love stories. With soft
+      grading, perfect music synchronization, and heartfelt storytelling, we ensure your special day feels
+      as magical to watch years from now as it felt to live in the moment.
+    </p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+    <div class="founder-tag">
+      "Where creativity meets the timeline."
+      <span>Akshay Balinagl — Founder, Indu Production</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="page">
+    <span class="eyebrow">What We Do</span>
+    <h2 class="section-heading">Our <em>services</em></h2>
+    <p class="section-sub">From raw footage to a finished cinematic film — everything your wedding story needs.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+        <h3>Wedding Film Editing</h3>
+        <p>Full-length cinematic edits weaving your entire day into one seamless love story.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Cinematic Color Grading</h3>
+        <p>Soft, film-inspired tones and grading that give every frame a luxury look.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⭐</div>
+        <h3>Wedding Highlights</h3>
+        <p>A tight, emotional highlight reel capturing the best moments of your celebration.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Reels &amp; Social Edits</h3>
+        <p>Trend-ready, scroll-stopping reels edited for reach and engagement.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚁</div>
+        <h3>Drone Footage Editing</h3>
+        <p>Sweeping aerial shots edited into smooth, cinematic establishing sequences.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎵</div>
+        <h3>Audio Synchronization</h3>
+        <p>Perfectly timed music and sound design that elevate every emotional beat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO (rendered by JS) ============ -->
+<section class="portfolio" id="portfolio">
+  <div class="page">
+    <span class="eyebrow">Our Work</span>
+    <h2 class="section-heading">Recent <em>projects</em></h2>
+    <p class="section-sub">A glimpse into the wedding films we've had the honour of editing.</p>
+    <div class="portfolio-grid" id="portfolio-grid"></div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="page stats-grid">
+    <div><div class="stat-num">100+</div><div class="stat-lbl">Wedding Films</div></div>
+    <div><div class="stat-num">500+</div><div class="stat-lbl">Happy Clients</div></div>
+    <div><div class="stat-num">5+</div><div class="stat-lbl">Years Experience</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-lbl">Satisfaction</div></div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section>
+  <div class="page">
+    <span class="eyebrow">Location</span>
+    <h2 class="section-heading">Based in <em>India</em></h2>
+    <p class="section-sub">Available for destination weddings and travel bookings worldwide.</p>
+    <div class="location-wrap">
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps?q=India&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="location-info">
+        <h3>Studio location</h3>
+        <p><span class="tag">Country:</span> India</p>
+        <p><span class="tag">Availability:</span> Destination &amp; travel bookings worldwide</p>
+        <p><span class="tag">Founder:</span> Akshay Balinagl</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="page">
+    <span class="eyebrow">Get In Touch</span>
+    <h2 class="section-heading">Let's create your <em>love story</em></h2>
+    <p class="section-sub">Reach out and let's talk about turning your wedding footage into a cinematic film.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="https://www.instagram.com/theindutimeline_?igsh=MWE5djA0dnUzbzB6bQ==" target="_blank" rel="noopener">
+        <div class="contact-icon">📷</div>
+        <h4>Instagram</h4>
+        <p>@theindutimeline_</p>
+      </a>
+      <a class="contact-card" href="mailto:Indufilms5@gmail.com">
+        <div class="contact-icon">✉️</div>
+        <h4>Email</h4>
+        <p>Indufilms5@gmail.com</p>
+      </a>
+      <a class="contact-card" href="tel:+917385364154">
+        <div class="contact-icon">📞</div>
+        <h4>Call Now</h4>
+        <p>+91 73853 64154</p>
+      </a>
+      <a class="contact-card" href="https://www.google.com/maps?q=India" target="_blank" rel="noopener">
+        <div class="contact-icon">📍</div>
+        <h4>Location</h4>
+        <p>India — Get Directions</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="page">
+    <div class="footer-top">
+      <div class="footer-brand-wrap">
+        <div class="footer-brand">
+          <img src="assets/logo.jpeg" alt="INDU PRODUCTION logo">
+          <span class="n1">INDU PRODUCTION</span>
+        </div>
+        <p class="tag">Crafting Cinematic Love Stories. Founded by Akshay Balinagl.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/theindutimeline_?igsh=MWE5djA0dnUzbzB6bQ==" target="_blank" rel="noopener">IG</a>
+        <a href="mailto:Indufilms5@gmail.com">✉</a>
+        <a href="tel:+917385364154">☎</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> INDU PRODUCTION. All rights reserved.</div>
+      <div>Made with <span>&#9829;</span> in India</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile menu ---------- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  /* =========================================================
+     PORTFOLIO DATA — replace video URLs with your own edited films
+     ========================================================= */
+  const portfolioItems = [
+    {
+      title: "The Ceremony — Riya & Karan",
+      category: "Wedding",
+      video: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_155500_808e6fdd-761f-4acd-b3be-cb7e6e700def.mp4"
+    },
+    {
+      title: "Golden Hour — Pre-Wedding",
+      category: "Pre Wedding",
+      video: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_030111_a9e15665-d379-4a7f-8116-695bbe452ad1.mp4"
+    },
+    {
+      title: "First Dance — Reception",
+      category: "Reception",
+      video: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4"
+    },
+    {
+      title: "Quiet Glances — Couple Shoot",
+      category: "Couple Shoot",
+      video: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_154232_f8809bd2-a6c3-4a38-908d-2005e5b3cb3e.mp4"
+    }
+  ];
+
+  function hoverFxHTML() {
+    return `
+      <div class="video-overlay"></div>
+      <div class="video-plus">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#171512" stroke-width="2" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </div>
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+    `;
+  }
+
+  function renderPortfolio(items) {
+    const el = document.getElementById('portfolio-grid');
+    el.innerHTML = items.map(item => `
+      <article class="portfolio-card">
+        <div class="video-box">
+          <video src="${item.video}" autoplay loop muted playsinline></video>
+          ${hoverFxHTML()}
+        </div>
+        <div class="portfolio-title-row">
+          <span class="portfolio-title">${item.title}</span>
+          <span class="badge">${item.category}</span>
+        </div>
+      </article>
+    `).join('');
+  }
+  renderPortfolio(portfolioItems);
+</script>
+
+</body>
+</html>
