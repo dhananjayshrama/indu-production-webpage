@@ -4,7 +4,7 @@ A simple one-page website for Indu Production, built with HTML and CSS.
 
 ## Live Website
 
-https://dhananjayshrama.github.io/Webpages/
+https://dhananjayshrama.github.io/indu-production-webpage/
 
 ## About
 
